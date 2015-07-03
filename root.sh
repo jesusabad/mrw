@@ -14,7 +14,7 @@ rm /system/app/Kinguser.apk >/dev/null
 rm -r /system/app/Kinguser >/dev/null
 am kill com.kingroot.master
 pm uninstall com.kingroot.master >/dev/null
-cat sdcard/mrw/busybox > /system/bin/busybox
+cat sdcard/mrw-master/busybox > /system/bin/busybox
 chown 0.1000 /system/bin/busybox
 chmod 0755 /system/bin/busybox
 busybox chattr -ia /system/xbin/ku.sud
@@ -27,9 +27,9 @@ busybox chattr -ia /system/xbin/supolicy
 rm /system/xbin/supolicy
 busybox chattr -ia /system/xbin/pidof >/dev/null 2>&1
 rm /system/xbin/pidof >/dev/null 2>&1
-cat /sdcard/mrw/su > /system/xbin/su
-cat /sdcard/mrw/su > /system/xbin/daemonsu
-cat /sdcard/mrw/su > /system/xbin/sugote
+cat /sdcard/mrw-master/su > /system/xbin/su
+cat /sdcard/mrw-master/su > /system/xbin/daemonsu
+cat /sdcard/mrw-master/su > /system/xbin/sugote
 cat /system/bin/sh > /system/xbin/sugote-mksh
 chown 0.0 /system/xbin/su
 chmod 0755 /system/xbin/su
@@ -66,7 +66,7 @@ rm /system/bin/install-recovery.sh
 busybox chattr -ia /system/bin/install-recovery.sh-ku.bak
 rm /system/bin/install-recovery.sh-ku.bak
 pm uninstall eu.chainfire.supersu >/dev/null  2>&1
-pm install /sdcard/mrw/superuser.apk
+pm install /sdcard/mrw-master/superuser.apk
 busybox chattr -ia /system/usr/iku/isu
 rm -r /system/usr/iku
 busybox chattr -ia /system/etc/install-recovery.sh
